@@ -34,7 +34,11 @@
         flex-direction: row;
         gap: 7px;
         position: fixed;
+        p{
+            color:rgb(7, 169, 234) ;
+        }
     }
+
     .Logo img{
         height: 50px;
         width: 50px;
@@ -56,42 +60,109 @@
 
     }
     .loginbox{
-        height: 400px;
-        width: 360px;
+        height: 450px;
+        width: 380px;
         border-radius: 10px;
-        background:black;
+        background:#fff;
         margin: 0;
         display: flex;
         flex-direction: column;
-        box-shadow: 50px black;
+        box-shadow: 0px 0px 5px  5px whitesmoke ;
+        
         
 
     }
-    .logincre{
-        padding: 10px;
+    .loginbox form h1{
+        margin-top: 50px;
     }
+    
+    input{
+        margin-top: 30px;
+        margin-left: 50px;
+        width: 280px;
+        border-radius:5px;
+        border: none;
+        outline: none;
+        
+
+       
+    }
+    .input-user input {
+      box-shadow: 0px 2px whitesmoke;
+      border: none;
+      outline: none;
+    }
+    .input-password input{
+      box-shadow: 0px 2px whitesmoke;
+      border: none;
+      outline: none;
+    }
+
+    .submitbtn input{
+         height: 40px;
+         background-color: rgb(7, 169, 234);
+         color: white;
+    }
+    .accbtn input{
+        height: 40px;
+        background-color: rgb(42, 153, 42);
+        color: white;
+    }
+    ::placeholder{
+        color: grey;
+    }
+    .support{
+        background-color: white;
+        position:absolute;
+        top: 0;
+        right: 60px;
+        h1{
+           font-size: 17px; 
+        }
+    }
+    .suppcontent {
+        font-weight:600;
+    }
+    .suppnum{
+        color:rgb(7, 169, 234) ;
+    }
+    
+
     
    </style>
 
    <body>
 
     <div class="Logo"> 
-        <img src="imgs/logo.jpeg" alt="">
+        <img src="imgs/logo-removebg-preview.png" alt="">
         <p class="skypara">skyblue mail</p>
     </div>
-    <div class="wrapper">
-        <div class="loginbox">
-            <h1>login</h1>
-            <div class="logincre">
-                <input type="text" name="" id="">
-            <input type="password" name="" id="">
-            </div>
-            <input type="submit" value="submit">
-            <button>create an account</button>
-         </div>
-        </div>
     
-  <h1>hiii</h1>
+        <div class="wrapper">
+            <div class="loginbox">
+                
+                <form action="">
+                    <h1>LOGIN</h1>
+                 <div class="input-user"><input type="text" name="" id="" placeholder="Username,email or mobile"></div>
+                <div class="input-password"><input type="password" name="" id="" placeholder="password"></div>
+
+               <div class="submitbtn">
+                    <input type="submit" value="submit">
+                    
+                </div>
+                <div class="accbtn"><input type="button" value="create an account"></div>
+                
+                
+                </form>
+             </div>
+            </div>
+        <div class="support">
+            <h1 class="suppcontent">For support contact</h1>
+            <h1 class="suppnum" >+91 8940570614</h1>
+        </div>
+   
+    
+  
   
   <!-- JS here -->
 	
