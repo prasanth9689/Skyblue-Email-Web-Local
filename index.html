@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-         <title>Skyblue Business Email hOsting </title>
+         <title>Skyblue Business Email hosting </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="manifest" href="site.webmanifest">
@@ -26,16 +26,51 @@
    </head>
    <style>
     @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+    *{
+        margin: 0;
+    }
+    .Logo{
+        display: flex;
+        flex-direction: row;
+        gap: 7px;
+        position: fixed;
+    }
     .Logo img{
         height: 50px;
         width: 50px;
+        
     }
     .Logo .skypara{
         font-family: "Open Sans", sans-serif;
         text-transform: uppercase;
         color: skyblue;
         font-size: 2rem;
+        font-weight: bold;
     }
+    .wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform:translateY(48%) ;
+
+
+    }
+    .loginbox{
+        height: 400px;
+        width: 360px;
+        border-radius: 10px;
+        background:black;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 50px black;
+        
+
+    }
+    .logincre{
+        padding: 10px;
+    }
+    
    </style>
 
    <body>
@@ -44,6 +79,17 @@
         <img src="imgs/logo.jpeg" alt="">
         <p class="skypara">skyblue mail</p>
     </div>
+    <div class="wrapper">
+        <div class="loginbox">
+            <h1>login</h1>
+            <div class="logincre">
+                <input type="text" name="" id="">
+            <input type="password" name="" id="">
+            </div>
+            <input type="submit" value="submit">
+            <button>create an account</button>
+         </div>
+        </div>
     
   
   
