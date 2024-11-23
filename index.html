@@ -126,6 +126,9 @@
     .suppnum{
         color:rgb(7, 169, 234) ;
     }
+    .input-error{
+        border: 2px solid red;
+    }
     
 
     
@@ -143,11 +146,15 @@
                 
                 <form action="">
                     <h1>LOGIN</h1>
-                 <div class="input-user"><input type="text" name="" id="" placeholder="Username,email or mobile"></div>
-                <div class="input-password"><input type="password" name="" id="" placeholder="password"></div>
+                 <div class="input-user"><input type="text" name="" id="uName" class="name" placeholder="Username,email or mobile">
+                    <p id="error"></p>
+                </div>
+                <div class="input-password"><input type="password" name="" id="uPass" placeholder="Password">
+                    <p id="passerror"></p>
+                </div>
 
                <div class="submitbtn">
-                    <input type="submit" value="submit">
+                    <input type="submit" value="submit" onclick="userNameValidation()">
                     
                 </div>
                 <div class="accbtn"><input type="button" value="create an account"></div>
@@ -165,6 +172,65 @@
   
   
   <!-- JS here -->
+   <script>
+    function userNameValidation(){
+        let userName=document.getElementById('uName').value ;
+        let userPassword=document.getElementById('uPass').value ;
+        if(userName!=="" && userName!==null){
+            document.getElementById('error').style.visibility='hidden';
+            if(userPassword!==null && userPassword!=""){
+                document.getElementById('passerror').style.visibility='hidden';
+                alert(`hello ${userName} welcome to home page`)
+
+            }
+            else{
+                document.getElementById('passerror').innerHTML="Enter password";
+                passerror.style.color="red";
+                userPassword.classList.add('input-error');
+
+            }
+
+        }
+        else{
+            document.getElementById('error').innerHTML="Enter valid email or mobile number"
+            error.style.color="red"
+            userName.classList.add('input-error');
+
+        }
+    }
+
+   </script>
+   <!-- <script>
+    function userNameValidation() {
+        // Get input elements
+        let userNameInput = document.getElementById('uName');
+        let userPasswordInput = document.getElementById('uPass');
+        let userName = userNameInput.value.trim();
+        let userPassword = userPasswordInput.value.trim();
+
+        // Username validation
+        if (userName !== "" && userName !== null) {
+            document.getElementById('error').style.visibility = 'hidden';
+            userNameInput.classList.remove('input-error'); // Remove red outline if valid
+
+            // Password validation
+            if (userPassword !== "" && userPassword !== null) {
+                document.getElementById('passerror').style.visibility = 'hidden';
+                alert(`Hello ${userName}, welcome to the home page!`);
+            } 
+            else {
+                    document.getElementById('passerror').innerHTML = "Enter password";
+                    document.getElementById('passerror').style.color = "red";
+                    userPasswordInput.classList.add('input-error'); // Add red outline
+                }
+            } 
+        else {
+                document.getElementById('error').innerHTML = "Enter valid email or mobile number";
+                document.getElementById('error').style.color = "red";
+                userNameInput.classList.add('input-error'); // Add red outline
+            }
+        }
+    </script> -->
 	
 		<!-- All JS Custom Plugins Link Here here -->
         <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>  
