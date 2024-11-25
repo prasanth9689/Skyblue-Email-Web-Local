@@ -21,11 +21,10 @@ body {
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
+    border: 2px solid grey;
   }
   
-  .best-value {
-    border: 2px solid green;
-  }
+  
   
   .pricing-card h3 {
     font-size: 1.5rem;
@@ -68,6 +67,7 @@ body {
   
   .pricing-card ul li {
     margin: 10px 0;
+    gap: 5px;
   }/* General list styles */
 ul {
   list-style: none; /* Remove default bullets */
@@ -83,8 +83,9 @@ ul li {
 
 /* Add tick for active features */
 ul li::before {
-  content: "->"; /* Tick for available features */
+  content: "✔️"; /* Tick for available features */
   position: absolute;
+  bottom: 2px;
   left: 0; /* Align tick to the left */
   color: #007bff; /* Blue color for tick */
   font-size: 1.2em;
