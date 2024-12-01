@@ -9,7 +9,7 @@
         <link rel="manifest" href="site.webmanifest">
 		<link rel="shortcut icon" type="image/x-icon" href="https://jobs.skyblue.co.in/assets/img/favicon.ico">
 
-		<!-- CSS here -->
+            <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
             <link rel="stylesheet" href="assets/css/bootstrap.min.css">
             <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
             <link rel="stylesheet" href="assets/css/flaticon.css">
@@ -21,14 +21,14 @@
             <link rel="stylesheet" href="assets/css/themify-icons.css">
             <link rel="stylesheet" href="assets/css/slick.css">
             <link rel="stylesheet" href="assets/css/nice-select.css">
+            <link rel="stylesheet" href="assets/css/toast.css">
             <link rel = "stylesheet" type = "text/css" href = "assets/css/login.css">
             <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
    </head>
-
    <body>
-    
     <header>
-        <!-- Header Start -->
+      
        <div class="header-area header-transparrent">
            <div class="headder-top header-sticky">
                 <div class="container">
@@ -36,7 +36,7 @@
                         <div class="col-lg-3 col-md-2">
                             <!-- Logo -->
                             <div class="logo">
-                                <a href="https://jobs.skyblue.co.in/"><img class="logo_img" src="https://jobs.skyblue.co.in/images/logo/logo_3.jpg" alt=""></a>
+                                <a href="https://jobs.skyblue.co.in/"><img class="logo_img" src="assets/img/logo/logo.png" alt=""></a>
                             </div>  
                         </div>
 
@@ -61,11 +61,9 @@
                                     </p>
                                 </div> -->
 
-                                <div class="phone-support-text" style="line-height: 1.5em;
-                                height: 3em;
-                                overflow: hidden;">
+                                <div class="phone-support-text">
                                   For support contact
-                                       <p style="color: #0174BE; margin-top: 5px;"> +91 8940570614</p>
+                                       <p class="mobile-no"> +91 8940570614</p>
                                   </div>
                             </div>
                         </div>
@@ -81,19 +79,26 @@
     </header>
 
     <div id = "frm">
-        <h3 class="login">Login</h3>
+        <h3 class="login"><strong>LOGIN</strong></h3>
 
-        <form class="form" name="form">
+        <form class="form" name="form" autocomplete="new-password">
             <p>
-                <input name="username" id="username" type="text" placeholder="username" class="edit" autocomplete="off">
+                <input name="username" id="username" type="text" placeholder="Username, email or mobile" class="edit username" autocomplete="new-password">
+                <p class="error-username" id="error-username">Enter valid email or mobile number.</p>
             </p>
             
             <p>
-                <input name="password" id="password" type="password" placeholder="password" class="edit">
+                <input name="password" id="password" type="password" placeholder="Password" class="edit password" autocomplete="new-password">
+                <p class="error-password" id="error-password">Enter password.</p>
             </p>
             
             <p>
                 <button type="submit" id="btn">Submit</button>
+                <!-- <button type="submit" id="btn" class="custom-toast success-toast">Submit</button> -->
+            </p>
+
+            <p>
+                <button type="submit" id="btn-cr">Create an account</button>
             </p>
         </form>
      </div>
@@ -101,22 +106,19 @@
 
      <script>
 
+       // Automatically focus the input field when the page loads
+       var textbox = document.getElementById("username");
+       textbox.focus();
+    
         const formEl = document.querySelector('.form');
 
         formEl.addEventListener('submit', event => {
             event.preventDefault();
 
-            $("#username").on('change keydown paste input', function(){
-                  document.getElementById("username").className = document.getElementById("username").className.replace(" error", ""); // this removes the error class
-             });
-
-             $("#password").on('change keydown paste input', function(){
-                  document.getElementById("password").className = document.getElementById("password").className.replace(" error", ""); // this removes the error class
-             });
-
             var id = document.form.username.value;
             var ps = document.form.password.value;
 
+        
             if (id.length == "" && ps.length == "") {
                   document.getElementById("username").className = document.getElementById("username").className + " error";  // this adds the error class
                    
@@ -124,6 +126,7 @@
                   var textbox = document.getElementById("username");
                   textbox.focus();
                   textbox.scrollIntoView();
+                  document.getElementById( 'error-username' ).style.display = 'block';
                   return false; 
            }else {
                     if (id.length == "") {
@@ -132,7 +135,7 @@
                     }
                     if (ps.length == "") {
                             document.getElementById("password").className = document.getElementById("password").className + " error";  
-
+                            document.getElementById( 'error-password' ).style.display = 'block';
                             var textbox = document.getElementById("password");
                             textbox.focus();
                             textbox.scrollIntoView();
@@ -140,52 +143,68 @@
         }
      }
 
-
             const formData = new FormData(formEl);
             const data = Object.fromEntries(formData);
 
             console.log(data);
         });
         
+        const inputElement = document.getElementById("username");
+        const password = document.getElementById("password");
+
+        inputElement.addEventListener("input", function() {
+            document.getElementById("username").className = document.getElementById("username").className.replace(" error", "");
+            document.getElementById( 'error-username' ).style.display = 'none';
+        });
+
+        password.addEventListener("input", function() {
+            document.getElementById("password").className = document.getElementById("password").className.replace(" error", "");
+            document.getElementById( 'error-password' ).style.display = 'none';
+        });
+        
      </script>
+
+    <!-- <div class="toast-overlay" id="toast-overlay">
+
+    </div>
+    <script src="assets/js/toast.js"></script> -->
 
   
   <!-- JS here -->
-	
 		<!-- All JS Custom Plugins Link Here here -->
-        <script src="https://jobs.skyblue.co.in/assets/js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
 		<!-- Jquery, Popper, Bootstrap -->
-		<script src="https://jobs.skyblue.co.in/assets/js/vendor/jquery-1.12.4.min.js"></script>
-        <script src="https://jobs.skyblue.co.in/assets/js/popper.min.js"></script>
-        <script src="https://jobs.skyblue.co.in/assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
 	    <!-- Jquery Mobile Menu -->
-        <script src="https://jobs.skyblue.co.in/assets/js/jquery.slicknav.min.js"></script>
+        <script src="assets/js/jquery.slicknav.min.js"></script>
 
 		<!-- Jquery Slick , Owl-Carousel Plugins -->
-        <script src="https://jobs.skyblue.co.in/assets/js/owl.carousel.min.js"></script>
-        <script src="https://jobs.skyblue.co.in/assets/js/slick.min.js"></script>
-        <script src="https://jobs.skyblue.co.in/assets/js/price_rangs.js"></script>
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/slick.min.js"></script>
+        <script src="assets/js/price_rangs.js"></script>
         
 		<!-- One Page, Animated-HeadLin -->
-        <script src="https://jobs.skyblue.co.in/assets/js/wow.min.js"></script>
-		<script src="https://jobs.skyblue.co.in/assets/js/animated.headline.js"></script>
-        <script src="https://jobs.skyblue.co.in/assets/js/jquery.magnific-popup.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+		<script src="assets/js/animated.headline.js"></script>
+        <script src="assets/js/jquery.magnific-popup.js"></script>
 
 		<!-- Scrollup, nice-select, sticky -->
-        <script src="https://jobs.skyblue.co.in/assets/js/jquery.scrollUp.min.js"></script>
-        <script src="https://jobs.skyblue.co.in/assets/js/jquery.nice-select.min.js"></script>
-		<script src="https://jobs.skyblue.co.in/assets/js/jquery.sticky.js"></script>
+        <script src="assets/js/jquery.scrollUp.min.js"></script>
+        <script src="assets/js/jquery.nice-select.min.js"></script>
+		<script src="assets/js/jquery.sticky.js"></script>
         
         <!-- contact js -->
-        <script src="https://jobs.skyblue.co.in/assets/js/contact.js"></script>
-        <script src="https://jobs.skyblue.co.in/assets/js/jquery.form.js"></script>
-        <script src="https://jobs.skyblue.co.in/assets/js/jquery.validate.min.js"></script>
-        <script src="https://jobs.skyblue.co.in/assets/js/mail-script.js"></script>
-        <script src="https://jobs.skyblue.co.in/assets/js/jquery.ajaxchimp.min.js"></script>
+        <script src="assets/js/contact.js"></script>
+        <script src="assets/js/jquery.form.js"></script>
+        <script src="assets/js/jquery.validate.min.js"></script>
+        <script src="assets/js/mail-script.js"></script>
+        <script src="assets/js/jquery.ajaxchimp.min.js"></script>
         
 		<!-- Jquery Plugins, main Jquery -->	
-        <script src="https://jobs.skyblue.co.in/assets/js/plugins.js"></script>
-        <script src="https://jobs.skyblue.co.in/assets/js/main.js"></script>
+        <script src="assets/js/plugins.js"></script>
+        <script src="assets/js/main.js"></script>
         
     </body>
 </html>
