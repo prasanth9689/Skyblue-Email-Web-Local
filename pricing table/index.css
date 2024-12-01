@@ -1,0 +1,169 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+  }
+  
+  .pricing-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .pricing-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 2px solid grey;
+  }
+  
+  
+  
+  .pricing-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .pricing-card .price {
+    font-size: 1.8rem;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  .pricing-card .price span {
+    display: block;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .pricing-card button {
+    background: #0073e6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 15px 0;
+  }
+  
+  .pricing-card button:hover {
+    background: #005bb5;
+  }
+  
+  .pricing-card ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .pricing-card ul li {
+    margin: 10px 0;
+    gap: 5px;
+  }/* General list styles */
+ul {
+  list-style: none; /* Remove default bullets */
+  padding: 0;
+}
+
+ul li {
+  margin: 10px 0;
+  padding-left: 25px; /* Add space for the tick or bullet */
+  position: relative; /* Enable positioning for ::before */
+  font-size: 1em;
+}
+
+/* Add tick for active features */
+ul li::before {
+  content: "✔️"; /* Tick for available features */
+  position: absolute;
+  bottom: 2px;
+  left: 0; /* Align tick to the left */
+  color: #007bff; /* Blue color for tick */
+  font-size: 1.2em;
+}
+
+/* Styling for unavailable features */
+ul li.inactive::before {
+  content: "⚫️"; /* Neutral bullet for unavailable features */
+  color: #999; /* Gray color for unavailable features */
+}
+
+ul li.inactive {
+  color: #999; /* Gray out text for unavailable features */
+}
+
+
+  /* Sign-in Page Styles */
+.signin-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .signin-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .signin-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .signin-container label {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #555;
+    text-align: left;
+  }
+  
+  .signin-container input {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .signin-container button {
+    background: #0073e6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .signin-container button:hover {
+    background: #005bb5;
+  }
+  
+  .signin-container p {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .signin-container p a {
+    color: #0073e6;
+    text-decoration: none;
+  }
+  
+  .signin-container p a:hover {
+    text-decoration: underline;
+  }
+  
