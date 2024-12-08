@@ -159,7 +159,7 @@
     background: var(--hoverButton);
 }
 
-.rightSide button.user {
+.rightSide .user {
     display: flex;
     justify-content: center;
     outline: 3px solid transparent;
@@ -174,7 +174,7 @@
     /*Permet de definir la couleur pour le profil d'un user*/
 }
 
-.rightSide button.user:hover {
+.rightSide .user:hover {
     outline: 3px solid var(--hoverButton);
 }
 
