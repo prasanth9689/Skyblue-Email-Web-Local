@@ -801,6 +801,20 @@ h1{
     margin-top: 10px;
 }
 
+.error-username{
+	color: #ff3500;
+	font-size: 12px;
+	margin-top: -15px;
+	display: none;
+}
+
+.error-password{
+	color: #ff3500;
+	font-size: 12px;
+	margin-top: -15px;
+	display: none;
+}
+
 
 #frm {
 	border: solid rgb(195, 216, 255) 1px;
