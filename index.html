@@ -10,249 +10,222 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="shortcut icon" type="image/x-icon" href="https://jobs.skyblue.co.in/assets/img/favicon.ico">
 
-    <!-- CSS here -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/flaticon.css">
-    <link rel="stylesheet" href="assets/css/price_rangs.css">
-    <link rel="stylesheet" href="assets/css/slicknav.css">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/css/themify-icons.css">
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/nice-select.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/login.css">
-    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
-</head>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
-    * {
-        margin: 0;
-    }
-
-    .Logo {
-        display: flex;
-        flex-direction: row;
-        gap: 7px;
-        position: fixed;
-
-        p {
-            color: rgb(7, 169, 234);
-        }
-    }
-
-    .Logo img {
-        height: 50px;
-        width: 50px;
-
-    }
-
-    .Logo .skypara {
-        font-family: "Open Sans", sans-serif;
-        text-transform: uppercase;
-        color: skyblue;
-        font-size: 2rem;
-        font-weight: bold;
-    }
-
-    .wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transform: translateY(48%);
+            <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+            <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+            <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+            <link rel="stylesheet" href="assets/css/flaticon.css">
+            <link rel="stylesheet" href="assets/css/price_rangs.css">
+            <link rel="stylesheet" href="assets/css/slicknav.css">
+            <link rel="stylesheet" href="assets/css/animate.min.css">
+            <link rel="stylesheet" href="assets/css/magnific-popup.css">
+            <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+            <link rel="stylesheet" href="assets/css/themify-icons.css">
+            <link rel="stylesheet" href="assets/css/slick.css">
+            <link rel="stylesheet" href="assets/css/nice-select.css">
+            <link rel="stylesheet" href="assets/css/toast.css">
+            <link rel = "stylesheet" type = "text/css" href = "assets/css/login.css">
+            <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+   </head>
+   <body>
+    <header>
+      
+       <div class="header-area header-transparrent">
+           <div class="headder-top header-sticky">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-3 col-md-2">
+                            <!-- Logo -->
+                            <div class="logo">
+                                <a href="https://jobs.skyblue.co.in/"><img class="logo_img" src="assets/img/logo/logo.png" alt=""></a>
+                            </div>  
+                        </div>
 
 
-    }
+                        <div class="col-lg-9 col-md-9">
+                            <div class="menu-wrapper">
+                                <!-- Main-menu -->
+                                <div class="main-menu">
+                                    <nav class="d-none d-lg-block">
+                                        <ul id="navigation">
+                                            <!-- <li><a href="index.html">Home</a></li>
+                                            <li><a href="../price.html">Price </a></li>
+                                            <li><a href="offer.html">Offer</a></li> -->
+                                         
+                                        </ul>
+                                    </nav>
+                                </div>          
+                                <!-- Header-btn -->
+                                <!-- <div class="header-btn d-none f-right d-lg-block">
+                                  <p>For support contact
+                                     <p style="color: #0174BE;"> +91 8940570614</p>
+                                    </p>
+                                </div> -->
 
-    .loginbox {
-        height: 450px;
-        width: 380px;
-        border-radius: 10px;
-        background: #fff;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        box-shadow: 0px 0px 5px 5px whitesmoke;
-
-
-
-    }
-
-    .loginbox form h1 {
-        margin-top: 50px;
-    }
-
-    input {
-        margin-top: 30px;
-        margin-left: 50px;
-        width: 280px;
-        border-radius: 5px;
-        border: none;
-        outline: none;
-
-
-
-    }
-
-    .input-user input {
-        box-shadow: 0px 2px whitesmoke;
-        border: none;
-        outline: none;
-    }
-
-    .input-password input {
-        box-shadow: 0px 2px whitesmoke;
-        border: none;
-        outline: none;
-    }
-
-    .submitbtn input {
-        height: 40px;
-        background-color: rgb(7, 169, 234);
-        color: white;
-    }
-
-    .accbtn input {
-        height: 40px;
-        background-color: rgb(42, 153, 42);
-        color: white;
-    }
-
-    ::placeholder {
-        color: grey;
-    }
-
-    .support {
-        background-color: white;
-        position: absolute;
-        top: 0;
-        right: 60px;
-
-        h1 {
-            font-size: 17px;
-        }
-    }
-
-    .suppcontent {
-        font-weight: 600;
-    }
-
-    .suppnum {
-        color: rgb(7, 169, 234);
-    }
-
-    .input-error {
-        border: 2px solid red;
-    }
-</style>
-
-<body>
-
-    <div class="Logo">
-        <img src="imgs/logo-removebg-preview.png" alt="">
-        <p class="skypara">skyblue mail</p>
-    </div>
-
-    <div class="wrapper">
-        <div class="loginbox">
-
-            <form action="" id="form">
-                <h1>LOGIN</h1>
-                <div class="input-user"><input type="text" name="" id="uName" class="name"
-                        placeholder="Username,email or mobile">
-                    <p id="error"></p>
+                                <div class="phone-support-text">
+                                  For support contact
+                                       <p class="mobile-no"> +91 8940570614</p>
+                                  </div>
+                            </div>
+                        </div>
+                        <!-- Mobile Menu -->
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="input-password"><input type="password" name="" id="uPass" placeholder="Password">
-                    <p id="passerror"></p>
-                </div>
+           </div>
+       </div>
+        <!-- Header End -->
+    </header>
 
-                <div class="submitbtn">
-                    <input type="submit" value="submit" onclick="userNameValidation()">
+    <div id = "frm">
+        <h3 class="login"><strong>LOGIN</strong></h3>
 
-                </div>
-                <div class="accbtn"><input type="button" value="create an account"></div>
+        <form class="form" name="form" autocomplete="new-password">
+            <p>
+                <input name="username" id="username" type="text" placeholder="Username, email or mobile" class="edit username" autocomplete="new-password">
+                <p class="error-username" id="error-username">Enter valid email or mobile number.</p>
+            </p>
+            
+            <p>
+                <input name="password" id="password" type="password" placeholder="Password" class="edit password" autocomplete="new-password">
+                <p class="error-password" id="error-password">Enter password.</p>
+            </p>
+            
+            <p>
+                <button type="submit" id="btn">Submit</button>
+                <!-- <button type="submit" id="btn" class="custom-toast success-toast">Submit</button> -->
+            </p>
+
+            <p>
+                <button type="submit" id="btn-cr">Create an account</button>
+            </p>
+        </form>
+     </div>
 
 
-            </form>
-        </div>
-    </div>
-    <div class="support">
-        <h1 class="suppcontent">For support contact</h1>
-        <h1 class="suppnum">+91 8940570614</h1>
-    </div>
+     <script>
 
-    <!-- JS here -->
-    <script>
-        const form = document.getElementById('id')
-        const
-
-
-        // function userNameValidation() {
-        //     let userName = document.getElementById('uName').value;
-        //     let userPassword = document.getElementById('uPass').value;
-        //     if (userName !== "" && userName !== null) {
-        //         document.getElementById('error').style.visibility = 'hidden';
-        //         if (userPassword !== null && userPassword != "") {
-        //             document.getElementById('passerror').style.visibility = 'hidden';
-        //             alert(`hello ${userName} welcome to home page`)
-
-        //         }
-        //         else {
-        //             document.getElementById('passerror').innerHTML = "Enter password";
-        //             passerror.style.color = "red";
-        //             userPassword.classList.add('input-error');
-
-        //         }
-
-        //     }
-        //     else {
-        //         document.getElementById('error').innerHTML = "Enter valid email or mobile number"
-        //         error.style.color = "red"
-        //         userName.classList.add('input-error');
-
-        //     }
-        // }
-
-    </script>
+       // Automatically focus the input field when the page loads
+       var textbox = document.getElementById("username");
+       textbox.focus();
     
+        const formEl = document.querySelector('.form');
 
-    <!-- All JS Custom Plugins Link Here here -->
-    <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
-    <!-- Jquery, Popper, Bootstrap -->
-    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <!-- Jquery Mobile Menu -->
-    <script src="assets/js/jquery.slicknav.min.js"></script>
+        formEl.addEventListener('submit', event => {
+            event.preventDefault();
 
-    <!-- Jquery Slick , Owl-Carousel Plugins -->
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/slick.min.js"></script>
-    <script src="assets/js/price_rangs.js"></script>
+            var id = document.form.username.value;
+            var ps = document.form.password.value;
 
-    <!-- One Page, Animated-HeadLin -->
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/animated.headline.js"></script>
-    <script src="assets/js/jquery.magnific-popup.js"></script>
+        
+            if (id.length == "" && ps.length == "") {
+                  document.getElementById("username").className = document.getElementById("username").className + " error";  // this adds the error class
+                   
+                  
+                  var textbox = document.getElementById("username");
+                  textbox.focus();
+                  textbox.scrollIntoView();
+                  document.getElementById( 'error-username' ).style.display = 'block';
+                  return false; 
+           }else {
+                    if (id.length == "") {
+                            document.getElementById("username").className = document.getElementById("username").className + " error";  
+                            return false;
+                    }
+                    if (ps.length == "") {
+                            document.getElementById("password").className = document.getElementById("password").className + " error";  
+                            document.getElementById( 'error-password' ).style.display = 'block';
+                            var textbox = document.getElementById("password");
+                            textbox.focus();
+                            textbox.scrollIntoView();
+                            return false;
+        }
+     }
 
-    <!-- Scrollup, nice-select, sticky -->
-    <script src="assets/js/jquery.scrollUp.min.js"></script>
-    <script src="assets/js/jquery.nice-select.min.js"></script>
-    <script src="assets/js/jquery.sticky.js"></script>
+            const formData = new FormData(formEl);
+            const data = Object.fromEntries(formData);
 
-    <!-- contact js -->
-    <script src="assets/js/contact.js"></script>
-    <script src="assets/js/jquery.form.js"></script>
-    <script src="assets/js/jquery.validate.min.js"></script>
-    <script src="assets/js/mail-script.js"></script>
-    <script src="assets/js/jquery.ajaxchimp.min.js"></script>
+            console.log(data);
+        });
+        
+        const inputElement = document.getElementById("username");
+        const password = document.getElementById("password");
 
-    <!-- Jquery Plugins, main Jquery -->
-    <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/main.js"></script>
+        inputElement.addEventListener("input", function() {
+            document.getElementById("username").className = document.getElementById("username").className.replace(" error", "");
+            document.getElementById( 'error-username' ).style.display = 'none';
+        });
 
-</body>
+        password.addEventListener("input", function() {
+            document.getElementById("password").className = document.getElementById("password").className.replace(" error", "");
+            document.getElementById( 'error-password' ).style.display = 'none';
+        });
+        
+     </script>
 
+    <!-- <div class="toast-overlay" id="toast-overlay">
+
+    </div>
+    <script src="assets/js/toast.js"></script> -->
+
+  
+  <!-- JS here -->
+		<!-- All JS Custom Plugins Link Here here -->
+        <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
+		<!-- Jquery, Popper, Bootstrap -->
+		<script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+	    <!-- Jquery Mobile Menu -->
+        <script src="assets/js/jquery.slicknav.min.js"></script>
+        <script src="assets/js/jquery.slicknav.min.js"></script>
+
+		<!-- Jquery Slick , Owl-Carousel Plugins -->
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/slick.min.js"></script>
+        <script src="assets/js/price_rangs.js"></script>
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/slick.min.js"></script>
+        <script src="assets/js/price_rangs.js"></script>
+        
+		<!-- One Page, Animated-HeadLin -->
+        <script src="assets/js/wow.min.js"></script>
+		<script src="assets/js/animated.headline.js"></script>
+        <script src="assets/js/jquery.magnific-popup.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+		<script src="assets/js/animated.headline.js"></script>
+        <script src="assets/js/jquery.magnific-popup.js"></script>
+
+		<!-- Scrollup, nice-select, sticky -->
+        <script src="assets/js/jquery.scrollUp.min.js"></script>
+        <script src="assets/js/jquery.nice-select.min.js"></script>
+		<script src="assets/js/jquery.sticky.js"></script>
+        <script src="assets/js/jquery.scrollUp.min.js"></script>
+        <script src="assets/js/jquery.nice-select.min.js"></script>
+		<script src="assets/js/jquery.sticky.js"></script>
+        
+        <!-- contact js -->
+        <script src="assets/js/contact.js"></script>
+        <script src="assets/js/jquery.form.js"></script>
+        <script src="assets/js/jquery.validate.min.js"></script>
+        <script src="assets/js/mail-script.js"></script>
+        <script src="assets/js/jquery.ajaxchimp.min.js"></script>
+        <script src="assets/js/contact.js"></script>
+        <script src="assets/js/jquery.form.js"></script>
+        <script src="assets/js/jquery.validate.min.js"></script>
+        <script src="assets/js/mail-script.js"></script>
+        <script src="assets/js/jquery.ajaxchimp.min.js"></script>
+        
+		<!-- Jquery Plugins, main Jquery -->	
+        <script src="assets/js/plugins.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/plugins.js"></script>
+        <script src="assets/js/main.js"></script>
+        
+    </body>
 </html>
